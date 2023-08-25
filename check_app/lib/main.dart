@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  //runApp(const MainApp(,));
+  // runApp(MainApp());
   runApp(
     MaterialApp(
+      title: "test",
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
           appBar: AppBar(
-            title: Text("Youtube"),
+            //title: Text("Youtube"),
             backgroundColor: Colors.red,
           ),
           body: Center(
@@ -45,9 +46,6 @@ class widget2 extends StatefulWidget {
 
 class state_widget2 extends State<widget2> {
   @override
-  void initState() {
-    widget.loading = true;
-  }
   @override
   Widget build(BuildContext context) {
     return widget.loading
@@ -55,17 +53,42 @@ class state_widget2 extends State<widget2> {
         : const Text("data");
   }
 }
-// class MainApp extends StatelessWidget {
-//   const MainApp({super.key});
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return const MaterialApp(
-//       home: Scaffold(
-//         body: Center(
-//           child: Text('xin'),
-//         ),
-//       ),
-//     );
-//   }
-// }
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: Scaffold(
+        body: Text(
+          'asdfghjkklqwg hello xin chap tat ca cac banj',
+          style: TextStyle(
+            color: Colors.red,
+            
+          ),
+          textAlign: TextAlign.center,
+        ),
+      ),
+    );
+  }
+}
+
+class open extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            title: Text("Youtube"),
+            backgroundColor: Colors.red,
+          ),
+          body: Center(
+            child: widget2(false),
+          ),
+        ),
+      ),
+    );
+  }
+}
