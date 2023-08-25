@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  // runApp(MainApp());
-  runApp(
-    MaterialApp(
-      title: "test",
-      debugShowCheckedModeBanner: false,
-      home: SafeArea(
-        child: Scaffold(
-          appBar: AppBar(
-            //title: Text("Youtube"),
-            backgroundColor: Colors.red,
-          ),
-          body: Center(
-            child: widget2(false),
-          ),
-        ),
-      ),
-    ),
-  );
+  runApp(MainApp());
+  // runApp(
+  //   MaterialApp(
+  //     title: "test",
+  //     debugShowCheckedModeBanner: false,
+  //     home: SafeArea(
+  //       child: Scaffold(
+  //         appBar: AppBar(
+  //           title: Text("Youtube"),
+  //           backgroundColor: Colors.red,
+  //         ),
+  //         body: Center(
+  //           child: widget2(false),
+  //         ),
+  //       ),
+  //     ),
+  //   ),
+  // );
 }
 
 class widget1 extends StatelessWidget {
@@ -60,13 +60,22 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: Scaffold(
-        body: Text(
-          'asdfghjkklqwg hello xin chap tat ca cac banj',
-          style: TextStyle(
-            color: Colors.red,
-            
-          ),
-          textAlign: TextAlign.center,
+        body: Row(
+          //textDirection: TextDirection.ltr,
+          children: <Widget>[
+            Expanded(
+              child:
+                  Text('Deliver features faster', textAlign: TextAlign.center),
+            ),
+            Expanded(
+              child: Text('Craft beautiful UIs', textAlign: TextAlign.center),
+            ),
+            Expanded(
+              child: FittedBox(
+                child: FlutterLogo(),
+              ),
+            ),
+          ],
         ),
       ),
     );
