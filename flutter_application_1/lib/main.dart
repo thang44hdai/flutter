@@ -11,12 +11,13 @@ class MainApp extends StatefulWidget {
     return mainScreen();
   }
 }
-
 List<Color> pick_color = [
   Colors.red,
   Colors.green,
   Colors.yellow,
-  Colors.purple
+  Colors.purple,
+  Colors.black,
+  Colors.amber,
 ];
 
 class mainScreen extends State<MainApp> {
@@ -43,7 +44,8 @@ class mainScreen extends State<MainApp> {
               ),
               onPressed: () {
                 setState(() {
-                  if (idx <= 2)
+                  int n = pick_color.length;
+                  if (idx <= n-2)
                     color_screen = pick_color[++idx];
                   else {
                     idx = 0;
