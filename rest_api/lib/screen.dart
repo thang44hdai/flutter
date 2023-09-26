@@ -41,7 +41,6 @@ class _screenState extends State<screen> {
               child: ListTile(
                 title: Column(
                   children: [
-                    //Text("data")
                     Text(data.userId.toString()),
                     Text(data.title.toString()),
                     Text(data.body.toString()),
