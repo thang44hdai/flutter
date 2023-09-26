@@ -1,14 +1,13 @@
 {
   "project_info": {
-    "project_number": "900069120715",
-    "firebase_url": "https://test-user-91cd0-default-rtdb.europe-west1.firebasedatabase.app",
-    "project_id": "test-user-91cd0",
-    "storage_bucket": "test-user-91cd0.appspot.com"
+    "project_number": "656724210022",
+    "project_id": "user-79359",
+    "storage_bucket": "user-79359.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:900069120715:android:f12c116a7086d8aa6cd94e",
+        "mobilesdk_app_id": "1:656724210022:android:397d0b27dd61bf68fa18a7",
         "android_client_info": {
           "package_name": "com.example.firebase_realtime"
         }
@@ -16,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCLjaqE2Hp0KUiSsrhNIb243ev4B4ZS6z4"
+          "current_key": "AIzaSyCVC8CG3deih_gRyjklnOPF5lIAo9Uc1mM"
         }
       ],
       "services": {

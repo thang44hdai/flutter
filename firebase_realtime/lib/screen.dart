@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_realtime/user.dart';
 import 'package:flutter/material.dart';
@@ -14,12 +15,13 @@ class _screenState extends State<screen> {
   TextEditingController _tk = TextEditingController();
   TextEditingController _mk = TextEditingController();
 
-  final DatabaseReference databaseReference =
-      FirebaseDatabase.instance.reference();
-
   List<user> list_user = [];
 
-  void pushDataToFirebase(String name, String tk, String mk) {
+  void pushDataToFirebase(String name, String tk, String mk) async {
+    WidgetsFlutterBinding.ensureInitialized();
+    await Firebase.initializeApp();
+    final DatabaseReference databaseReference =
+        FirebaseDatabase.instance.reference();
     databaseReference.child(name).set({'key1': tk, 'key2': mk});
   }
 
@@ -73,6 +75,9 @@ class _screenState extends State<screen> {
                     _mk.text = "";
                   });
                   pushDataToFirebase(_name.text, _tk.text, _mk.text);
+                  // databaseReference
+                  //     .child(_name.text)
+                  //     .set({'tk': _tk.text, 'mk': _mk.text});
                 },
                 child: Text("ADD"),
               ),
