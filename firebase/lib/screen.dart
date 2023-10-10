@@ -14,7 +14,7 @@ class SourceScreen extends StatelessWidget {
       },
       child: Hero(
         tag: 'imageHero',
-        child: Image.asset('path_to_image'),
+        child: Image.asset('assets/coca.png'),
       ),
     );
   }
@@ -31,7 +31,7 @@ class DestinationScreen extends StatelessWidget {
         child: Center(
           child: Hero(
             tag: 'imageHero',
-            child: Image.asset('path_to_image'),
+            child: Image.asset('assets/pepsi.png'),
           ),
         ),
       ),
